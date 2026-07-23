@@ -21,13 +21,11 @@ const ProductsCategory = () => {
   const limit = 8;
   const skip = (page - 1) * limit;
 
-  // Categories
   const { data: categories = [], isLoading: isCategoriesLoading } = useQuery({
     queryKey: ["categories"],
     queryFn: fetchCategories,
   });
 
-  // Products
   const {
     data: productsData,
     isLoading: isProductsLoading,
@@ -97,7 +95,6 @@ const ProductsCategory = () => {
               Danh sách sản phẩm
             </h2>
 
-            {/* Loading */}
             {isProductsLoading && (
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {[...Array(8)].map((_, index) => (
@@ -109,7 +106,6 @@ const ProductsCategory = () => {
               </div>
             )}
 
-            {/* Error */}
             {isError && (
               <div className="rounded-md border border-red-200 bg-red-50 p-4 text-red-600">
                 Lỗi tải sản phẩm: {(error as Error).message}
