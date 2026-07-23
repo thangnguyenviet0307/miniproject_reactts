@@ -19,7 +19,7 @@ const ProductDetail = () => {
 
   if (isLoading) {
     return (
-      <div className="container mx-auto p-8 text-center text-black animate-pulse font-['Poppins',sans-serif]">
+      <div className="max-w-[1200px] mx-auto p-8 text-center text-black animate-pulse font-['Poppins',sans-serif]">
         Đang tải chi tiết sản phẩm...
       </div>
     );
@@ -27,14 +27,14 @@ const ProductDetail = () => {
 
   if (isError || !product) {
     return (
-      <div className="container mx-auto p-8 text-center text-red-500 font-['Poppins',sans-serif]">
+      <div className="max-w-[1200px] mx-auto p-8 text-center text-red-500 font-['Poppins',sans-serif]">
         Không tìm thấy sản phẩm!
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto px-4 py-6 font-['Poppins',sans-serif]">
+    <div className="max-w-[1200px] mx-auto px-4 py-6 font-['Poppins',sans-serif]">
       {/* Breadcrumbs */}
       <ul className="breadcrumbs flex items-center gap-2 text-sm text-slate-500 mb-6">
         <li>
